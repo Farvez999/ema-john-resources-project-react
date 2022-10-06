@@ -6,20 +6,22 @@ import Product from '../Product/Product';
 import './Shop.css'
 import '../../utilities/fakedb'
 import { addToDb, getStoredCard } from '../../utilities/fakedb';
+import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
+    const products = useLoaderData();
 
 
     const [cart, setCart] = useState([]);
     // console.log(cart.length)
 
 
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, [])
+    // useEffect(() => {
+    //     fetch('products.json')
+    //         .then(res => res.json())
+    //         .then(data => setProducts(data));
+    // }, [])
 
     useEffect(() => {
         const storedCard = getStoredCard();
