@@ -1,8 +1,9 @@
 .review-item {
     display: flex;
     border: 1px solid #94A0A7;
+    border-radius: 8px;
     width: 571px;
-    margin: 0 auto;
+    margin: 21px auto;
     padding: 8px;
 }
 
@@ -27,6 +28,16 @@
     border-radius: 50%;
     border: 0;
     background-color: rgba(235, 87, 87, 0.3);
+}
+
+.btn-delete:hover {
+    background-color: rgba(235, 87, 87, 0.6);
+    cursor: pointer;
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
 }
 
 .delete-icon {
