@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
+import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Orders = () => {
     const { products, previousCart } = useLoaderData();    //{ products, previousCart }
@@ -8,14 +9,13 @@ const Orders = () => {
     return (
         <div>
             <div className='shop-container'>
-                <div className="products-container">
-                    {/* {
-                    products.map(product => <Product
-                        key={product.id}
-                        product={product}
-                        handlerAddToCart={handlerAddToCart}
-                    ></Product>)
-                } */}
+                <div className="order-container">
+                    {
+                        cart.map(product => <ReviewItem
+                            key={product.id}
+                            product={product}
+                        ></ReviewItem>)
+                    }
                 </div>
                 <div className="cart-container">
                     <Cart cart={cart}></Cart>
