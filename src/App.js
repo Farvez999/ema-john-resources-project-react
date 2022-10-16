@@ -9,6 +9,8 @@ import Shop from './components/Shop/Shop';
 import { productsAndCartLoaders } from './loaders/productsAndCartLoaders';
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
+import Shipping from './components/Shipping/Shipping';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
 
@@ -42,6 +44,10 @@ function App() {
         {
           path: '/signup',
           element: <SignUp></SignUp>,
+        },
+        {
+          path: '/shipping',
+          element: <PrivateRoute><Shipping></Shipping></PrivateRoute>,
         }
       ]
     }
