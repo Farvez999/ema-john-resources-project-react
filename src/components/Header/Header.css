@@ -19,6 +19,11 @@
     color: orange;
 }
 
+.btn-logout {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {
     .header {
